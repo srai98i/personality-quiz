@@ -24,5 +24,8 @@ PLAN
   > store each score 
   > submit button calculates an overall score 
   > translates to stage in hero journey 
-
+- decide on the state management strategy
+  > context
+  > Redux
+  
  */

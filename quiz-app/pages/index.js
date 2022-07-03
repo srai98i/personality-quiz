@@ -2,9 +2,15 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import NavBar from "../components/NavBar";
 import Quiz from "../components/Quiz";
+import { useAppContext } from "../context/state";
 
 export default function Home() {
+
+   const mycontext = useAppContext();
+   console.log(mycontext);
+
   return (
+
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
