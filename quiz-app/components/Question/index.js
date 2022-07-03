@@ -1,7 +1,7 @@
-export default function Question() {
+export default function Question({text}) {
   return (
     <>
-      <p> What's your favourite colour?</p>
+      <p>{text}</p>
     </>
   );
 }
