@@ -23,3 +23,10 @@ export default function Home() {
     </div>
   );
 }
+
+/* 
+- global state 
+- each answer button will be agree - a, slightly agree -b 
+- each time the button is selected it adds a score
+- if 
+*/

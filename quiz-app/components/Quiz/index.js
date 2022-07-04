@@ -1,19 +1,20 @@
 import Question from "../Question";
 import Answer from "../Answer";
 import SubmitButton from "../SubmitButton";
+import { questionsArray } from "../../lib/quizData";
 
 export default function Quiz() {
     return (
-        <>
-           <Question text="What is your favourite colour?"/>
-           <Answer/>
-           <Question text="What is your favourite food?"/>
-           <Answer/> 
-           <Question text="What is your favourite song?"/>
-           <Answer/>
-           <SubmitButton/>
-        </>
-    )
+      <>
+        <Question text={questionsArray[0]} />
+        <Answer />
+        <Question text={questionsArray[1]} />
+        <Answer />
+        <Question text={questionsArray[2]} />
+        <Answer />
+        <SubmitButton />
+      </>
+    );
 }
 
 
@@ -31,7 +32,7 @@ PLAN
 
 /* 
 PLAN FOR QUIZ LOGIC
-- make lib folder with question array > renders on page 
+- make lib folder with question array > renders on page ✅ 
 - answers array in Quiz, use a handleAnswer function to push values into array (...spread)
 
 - array to add answer values to 
