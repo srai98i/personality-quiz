@@ -2,55 +2,57 @@ import AnswerButton from "../AnswerButton";
 import { useState } from "react";
 
 export default function Answer() {
-    
-    const [agree, setAgree] = useState([])
-    
-    const [slightlyAgree, setSlightlyAgree] = useState([])
-    
-    const [neutral, setNeutral] = useState([])
-    
-    const [slightlyDisagree, setSlightlyDisagree] = useState([])
-    
-    const [disagree, setDisagree] = useState([])
-    
-    function handleAgree () {
-    const addedValue = 'a';
+  const [agree, setAgree] = useState([]);
+
+  const [slightlyAgree, setSlightlyAgree] = useState([]);
+
+  const [neutral, setNeutral] = useState([]);
+
+  const [slightlyDisagree, setSlightlyDisagree] = useState(["d"]);
+
+  const [disagree, setDisagree] = useState([]);
+
+  function handleAgree() {
+    const addedValue = "a";
     setAgree([...agree, addedValue]);
-    }
+  }
 
-    function handleSlightlyAgree () {
-    const addedValue = 'b';
+  function handleSlightlyAgree() {
+    const addedValue = "b";
     setSlightlyAgree([...slightlyAgree, addedValue]);
-    }
+  }
 
-    function handleNeutral () {
-    const addedValue = 'c';
+  function handleNeutral() {
+    const addedValue = "c";
     setNeutral([...neutral, addedValue]);
-    }
+    console.log(neutral);
+  }
 
-    function handleSlightlyDisagree () {
-    const addedValue = 'd';
+  function handleSlightlyDisagree() {
+    const addedValue = "d";
     setSlighltyDisagree([...slightlyDisagree, addedValue]);
-    }
+    console.log(slightlyDisagree);
+  }
 
-    function handleDisagree () {
-    const addedValue = 'e';
+  function handleDisagree() {
+    const addedValue = "e";
     setDisagree([...disagree, addedValue]);
-    }
-    
-    return (
-        <>
-       <AnswerButton type="agree"/>
-       <AnswerButton type="slightly agree"/>
-       <AnswerButton type="neutral"/>
-       <AnswerButton type="slightly disagree"/>
-       <AnswerButton type="disagree"/>
-        </>
-    )
+  }
+
+  return (
+    <>
+      <AnswerButton type="agree" functionality={handleAgree} />
+      <AnswerButton type="slightly agree" functionality={handleSlightlyAgree} />
+      <AnswerButton type="neutral" functionality={handleNeutral} />
+      <AnswerButton
+        type="slightly disagree"
+        functionality={handleSlightlyDisagree}
+      />
+
+      <AnswerButton type="disagree" functionality={handleDisagree} />
+    </>
+  );
 }
-
-
-
 
 /*
 create an answer array 
