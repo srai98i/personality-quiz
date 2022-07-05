@@ -1,7 +1,7 @@
 import AnswerButton from "../AnswerButton";
 import { useState } from "react";
 
-export default function Answer() {
+export default function Answer({setResult}) {
   const [agree, setAgree] = useState([]);
 
   const [slightlyAgree, setSlightlyAgree] = useState([]);
@@ -11,6 +11,18 @@ export default function Answer() {
   const [slightlyDisagree, setSlightlyDisagree] = useState(["d"]);
 
   const [disagree, setDisagree] = useState([]);
+
+
+  function confirmLongestArray() {
+    //cofirm which array is the longest
+
+    const answerArray = [agree.length, slightlyAgree.length, neutral.length, slightlyDisagree.length, disagree.length ];
+    const sortedArray = answerArray.sort((a, b) => b - a )
+    return sortedArray[0]
+
+  }
+
+  setResult(confirmLongestArray);
 
   function handleAgree() {
     const addedValue = "a";
@@ -30,7 +42,7 @@ export default function Answer() {
 
   function handleSlightlyDisagree() {
     const addedValue = "d";
-    setSlighltyDisagree([...slightlyDisagree, addedValue]);
+    setSlightlyDisagree([...slightlyDisagree, addedValue]);
     console.log(slightlyDisagree);
   }
 

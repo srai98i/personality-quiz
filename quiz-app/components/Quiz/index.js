@@ -4,13 +4,16 @@ import SubmitButton from "../SubmitButton";
 import { questionsArray } from "../../lib/quizData";
 
 export default function Quiz() {
+
+  const [result, setResult] = useState();
+
     return (
       <>
-        <Question text={questionsArray[0]} />
+        <Question text={ questionsArray[0] } />
         <Answer />
-        <Question text={questionsArray[1]} />
-        <Answer />
-        <Question text={questionsArray[2]} />
+        <Question text={ questionsArray[1] } />
+        <Answer result={ setResult } />
+        <Question text={ questionsArray[2] } />
         <Answer />
         <SubmitButton />
       </>
