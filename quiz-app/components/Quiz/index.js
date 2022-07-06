@@ -1,22 +1,42 @@
+import { useState } from "react";
 import Question from "../Question";
 import Answer from "../Answer";
 import SubmitButton from "../SubmitButton";
-import { questionsArray } from "../../lib/quizData";
+import questionsArray from "../../lib/quizData";
+
+// key needs to be on the looped elements - the parent element
 
 export default function Quiz() {
-    return (
-      <>
-        <Question text={questionsArray[0]} />
-        <Answer />
-        <Question text={questionsArray[1]} />
-        <Answer />
-        <Question text={questionsArray[2]} />
-        <Answer />
-        <SubmitButton />
-      </>
-    );
-}
+  //programatically generates an array of length questionsArray and fills with null values.
+  const [answers, setAnswers] = useState(
+    Array(questionsArray.length).fill(null)
+  );
+  const handleChange = (index, buttonType) => {
+    console.log({ index, buttonType });
+    setAnswers([
+      ...answers.slice(0, index),
+      buttonType,
+      ...answers.slice(Math.min(questionsArray.length - 1, index + 1)),
+    ]);
+  };
 
+  console.log({ answers });
+
+  return (
+    <form>
+      <ol>
+        {questionsArray.map((questionText, index) => (
+          <li key={questionText}>
+            <Question
+              question={questionText}
+              onChange={(buttonType) => handleChange(index, buttonType)}
+            />
+          </li>
+        ))}
+      </ol>
+    </form>
+  );
+}
 
 /*
 PLAN
