@@ -5,12 +5,9 @@ import Quiz from "../components/Quiz";
 import { useAppContext } from "../context/state";
 
 export default function Home() {
-
-   const mycontext = useAppContext();
-   console.log(mycontext);
+  const mycontext = useAppContext();
 
   return (
-
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
@@ -19,7 +16,7 @@ export default function Home() {
       </Head>
       <NavBar />
       <h1> Hero's Journey</h1>
-     <Quiz/>
+      <Quiz />
     </div>
   );
 }

@@ -3,20 +3,21 @@ export default function Question({ question, onChange }) {
 
   return (
     <>
-    <p>{question}</p>
+      <p>{question}</p>
       {buttonTypes.map((buttonType) => (
         <>
-        <input
-          type="radio"
-          name={question}
-          text={question}
-          key={buttonType}
-          id={question + buttonType}
-          onClick={() => onChange(buttonType)}
-        />
-        <label for ={question + buttonType}>{buttonType}</label>
-       </>))}
-   </>
+          <input
+            type="radio"
+            name={question}
+            text={question}
+            key={buttonType}
+            id={question + buttonType}
+            onClick={() => onChange(buttonType)}
+          />
+          <label for={question + buttonType}>{buttonType}</label>
+        </>
+      ))}
+    </>
   );
 }
 

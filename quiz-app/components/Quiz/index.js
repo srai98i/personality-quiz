@@ -1,27 +1,22 @@
 import { useState } from "react";
 import Question from "../Question";
+import Answer from "../Answer";
+import SubmitButton from "../SubmitButton";
 import questionsArray from "../../lib/quizData";
 
 // key needs to be on the looped elements - the parent element
 
 export default function Quiz() {
-
   //programatically generates an array of length questionsArray and fills with null values.
   const [answers, setAnswers] = useState(
     Array(questionsArray.length).fill(null)
   );
   const handleChange = (index, buttonType) => {
     console.log({ index, buttonType });
-    setAnswers([
-      ...answers.slice(0, index),
-      buttonType,
-      ...answers.slice(index + 1),
-    ]);
+    setAnswers(answers.map((x, ind) => (ind === index ? buttonType : x)));
   };
 
   console.log({ answers });
-  //
-
 
   return (
     <form>
@@ -30,24 +25,19 @@ export default function Quiz() {
           <li key={questionText}>
             <Question
               question={questionText}
-              
               onChange={(buttonType) => handleChange(index, buttonType)}
             />
-           
           </li>
         ))}
       </ol>
     </form>
   );
-
 }
 
 /* 
 - Radio buttons
 - One big state or smaller states with useReducer;
-- UseReducer - when we have a state within state -
-
-
+- UseReducer is best used when we have a state within state -
 */
 
 /*
