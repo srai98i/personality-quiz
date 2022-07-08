@@ -3,6 +3,7 @@ export default function Question({ question, onChange }) {
 
   return (
     <>
+    <p>{question}</p>
       {buttonTypes.map((buttonType) => (
         <>
         <input
