@@ -4,6 +4,7 @@ export default function Question({ question, onChange }) {
   return (
     <>
       {buttonTypes.map((buttonType) => (
+        <>
         <input
           type="radio"
           name={question}
@@ -12,8 +13,9 @@ export default function Question({ question, onChange }) {
           id={question + buttonType}
           onClick={() => onChange(buttonType)}
         />
-      ))}
-    </>
+        <label for ={question + buttonType}>{buttonType}</label>
+       </>))}
+   </>
   );
 }
 

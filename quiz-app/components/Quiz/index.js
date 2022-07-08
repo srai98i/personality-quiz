@@ -1,7 +1,5 @@
 import { useState } from "react";
 import Question from "../Question";
-import Answer from "../Answer";
-import SubmitButton from "../SubmitButton";
 import questionsArray from "../../lib/quizData";
 
 // key needs to be on the looped elements - the parent element
@@ -17,11 +15,13 @@ export default function Quiz() {
     setAnswers([
       ...answers.slice(0, index),
       buttonType,
-      ...answers.slice(Math.min(questionsArray.length - 1, index - 1)),
+      ...answers.slice(index + 1),
     ]);
   };
 
   console.log({ answers });
+  //
+
 
   return (
     <form>

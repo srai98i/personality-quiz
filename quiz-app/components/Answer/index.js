@@ -1,8 +1,9 @@
 import AnswerButton from "../AnswerButton";
 import { useState } from "react";
 
+//Not using right now
 
-export default function Answer() {
+ function Answer() {
   /* 
   Static array 
    - with a useReducer
