@@ -3,15 +3,26 @@ export default function Question({ question, onChange }) {
 
   return (
     <>
-      <p>{question}</p>
       {buttonTypes.map((buttonType) => (
-        <button
-          type="button"
+        <input
+          type="radio"
+          name={question}
           key={buttonType}
-          onClick={() => onChange(buttonType)}>
-          {buttonType}{" "}
-        </button>
+          id={question + buttonType}
+          onClick={() => onChange(buttonType)}
+        />
       ))}
     </>
   );
 }
+
+/* 
+Radio component
+
+    <div>
+      <input type="radio" id="huey" name="drone" value="huey"
+             checked>
+      <label for="huey">Huey</label>
+    </div>
+
+*/

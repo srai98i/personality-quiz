@@ -38,6 +38,14 @@ export default function Quiz() {
   );
 }
 
+/* 
+- Radio buttons
+- One big state or smaller states with useReducer;
+- UseReducer - when we have a state within state -
+
+
+*/
+
 /*
 PLAN
 - for answer and submit functionality 
@@ -78,4 +86,5 @@ Submit button
 
 
 
+  -- Inputs with radios with labels associate with labels
  */
