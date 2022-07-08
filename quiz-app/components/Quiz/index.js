@@ -16,7 +16,7 @@ export default function Quiz() {
     setAnswers([
       ...answers.slice(0, index),
       buttonType,
-      ...answers.slice(Math.min(questionsArray.length - 1, index + 1)),
+      ...answers.slice(Math.min(questionsArray.length - 1, index - 1)),
     ]);
   };
 

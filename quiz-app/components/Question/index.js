@@ -7,6 +7,7 @@ export default function Question({ question, onChange }) {
         <input
           type="radio"
           name={question}
+          text={question}
           key={buttonType}
           id={question + buttonType}
           onClick={() => onChange(buttonType)}
