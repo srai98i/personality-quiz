@@ -7,6 +7,7 @@ import questionsArray from "../../lib/quizData";
 // key needs to be on the looped elements - the parent element
 
 export default function Quiz() {
+
   //programatically generates an array of length questionsArray and fills with null values.
   const [answers, setAnswers] = useState(
     Array(questionsArray.length).fill(null)
@@ -36,6 +37,7 @@ export default function Quiz() {
       </ol>
     </form>
   );
+
 }
 
 /* 
