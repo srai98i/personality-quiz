@@ -1,7 +1,20 @@
 import AnswerButton from "../AnswerButton";
 import { useState } from "react";
 
-export default function Answer({setResult}) {
+//Not using right now
+
+ function Answer() {
+  /* 
+  Static array 
+   - with a useReducer
+   - one global state
+   Formik:
+   - Schema - a configuration - accept this kind of value 
+    - follows a given patern 
+    - validating data input from a 
+  */
+
+
   const [agree, setAgree] = useState([]);
 
   const [slightlyAgree, setSlightlyAgree] = useState([]);
