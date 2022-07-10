@@ -1,9 +1,10 @@
 export default function Question({ question, onChange }) {
-  const buttonTypes = ["agree", "slightlyAgree", "slightlyDisagree", "disagre"];
+  const buttonTypes = ["Agree", "Slightly Agree", "Neutral", "Slightly Disagree", "Disagree"];
 
   return (
     <>
-      {/* <p>{question}</p> */}
+       <p>{question}</p> 
+    
       {buttonTypes.map((buttonType) => (
         <>
           <input
@@ -12,6 +13,7 @@ export default function Question({ question, onChange }) {
             text={question}
             key={buttonType}
             id={question + buttonType}
+            value={buttonType}
             onClick={() => onChange(buttonType)}
           />
           <label htmlFor={question + buttonType}>{buttonType}</label>
