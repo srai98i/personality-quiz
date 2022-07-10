@@ -1,4 +1,4 @@
-export default [
+export const questionsArray =  [
   "Morning is my favourite time of the day.",
   "I'm a highly organized person.",
   "I'm effective at achieveing my goals.",
@@ -8,6 +8,13 @@ export default [
   "I've maintaned positive changes in my life.",
 ];
 
+export const heroStages = {
+  Agree: 'First String',
+  SlightlyAgree: 'Second String',
+  Neutral: 'Third String',
+  SlightlyDisagree: 'Fourth String',
+  Disagree: 'Fifth String'
+}
 /* 
 Object 
 - with a unique id

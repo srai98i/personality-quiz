@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Question from "../Question";
-import questionsArray from "../../lib/quizData";
+import { questionsArray, heroStages }  from "../../lib/quizData";
 
 // key needs to be on the looped elements - the parent element
 
@@ -32,8 +32,10 @@ export default function Quiz() {
     );
 
     console.log(mostOccuring);
+    
     setIsSubmitted(true);
     setFinalAnswer(mostOccuring);
+    console.log(heroStages.finalAnswer);
     return mostOccuring;
   };
 
@@ -51,7 +53,7 @@ export default function Quiz() {
         ))}
       </ol>
       <input type="submit" />
-      <p>{false ? finalAnswer : null}</p>
+      <p className='final-result'>{isSubmitted ? heroStages.finalAnswer : null}</p>
     </form>
   );
 }
@@ -70,8 +72,8 @@ render() {
 }
 */
 /* 
-switch statement takes in mostOccuring
-gives us back result that aligns with mostOccuring value 
+switch statement takes in mostOccuring 
+gives us back result that aligns with mostOccuring value
 want to render text conditionally based on that return 
 want to prevent users from pressing submit before the entire form has been filled in,
 
