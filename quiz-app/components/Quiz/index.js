@@ -25,7 +25,7 @@ export default function Quiz() {
     <form>
       <ol>
         {questionsArray.map((questionText, index) => (
-          <li key={Math.floor(Math.random() * 1000)}>
+          <li key={index.toString()}>
             <Question
               question={questionText}
               onChange={(buttonType) => handleChange(index, buttonType)}

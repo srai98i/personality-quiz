@@ -1,7 +1,27 @@
-export default function AnswerButton({ size, colour, functionality, type }) {
+export default function AnswerButton({ question }) {
+  const buttonTypes = [
+    "Agree",
+    "Slightly Agree",
+    "Neutral",
+    "Slightly Disagree",
+    "Disagree",
+  ];
+
   return (
-    <button size={size} colour={colour} onClick={functionality}>
-      {type}
-    </button>
+    <>
+    {buttonTypes.map((buttonType) => (
+      <span key={question +  buttonType}>
+        <input
+          type="radio"
+          name={question}
+          key={question + buttonType}
+          id={question + buttonType}
+          value={buttonType}
+          onClick={() => onChange(buttonType)}
+        />
+        <label htmlFor={question + buttonType}>{buttonType}</label>
+      </span>
+    ))}
+    </>
   );
 }
