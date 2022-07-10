@@ -17,17 +17,19 @@ export default function Quiz() {
     );
   };
 
-  const getQuizResult = (answers) => {
-    const answerArray = [...answers];
-    console.log(answerArray);
-    const sortedArray = answerArray.sort((a, b) => b - a);
-    console.log(sortedArray);
-  };
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      console.log(answers);
-    };
+      const answerArray = [...answers];
+      //const sortedArray = answerArray.sort((a, b) => b - a);
+      const mostOccuring = answerArray.reduce((previous, current, i, arr) =>
+      arr.filter(item => item === previous).length >
+      arr.filter(item => item === current).length ? previous : current
+      
+);
+console.log(mostOccuring)
+return mostOccuring  
+  };
 
   return (
     <form onSubmit={handleSubmit}>
@@ -45,3 +47,21 @@ export default function Quiz() {
     </form>
   );
 }
+
+
+/* 
+switch statement takes in mostOccuring
+gives us back result that aligns with mostOccuring value 
+want to render text conditionally based on that return 
+
+do we want to:
+- send to another page?
+- work on a toggle which renders a result, and then send to another page after mvp ? 
+*/
+
+/* NEXT STEPS
+- conditionally render result of mostOccuring
+- lib.js make object with k/v pair of {buttonType: heros journey}
+- import into quiz and use object to conditionally render result on browser
+   = our logic for generating results is DONE 
+*/
