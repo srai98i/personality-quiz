@@ -3,7 +3,7 @@ export default function Question({ question, onChange }) {
 
   return (
     <>
-      <p>{question}</p>
+      {/* <p>{question}</p> */}
       {buttonTypes.map((buttonType) => (
         <>
           <input
@@ -14,7 +14,7 @@ export default function Question({ question, onChange }) {
             id={question + buttonType}
             onClick={() => onChange(buttonType)}
           />
-          <label for={question + buttonType}>{buttonType}</label>
+          <label htmlFor={question + buttonType}>{buttonType}</label>
         </>
       ))}
     </>

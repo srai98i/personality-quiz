@@ -25,8 +25,9 @@ export default function Quiz() {
           <li key={questionText}>
             <Question
               question={questionText}
-              onChange={(buttonType) => handleChange(index, buttonType)}
-            />
+              onChange={(buttonType) => handleChange(index, buttonType)}>
+            <p> Hello</p>
+            </Question>
           </li>
         ))}
       </ol>
