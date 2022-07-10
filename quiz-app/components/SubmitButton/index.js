@@ -1,7 +1,14 @@
-export default function SubmitButton({getQuizResult}) {
-    return (
-        <>
-         <button onClick={getQuizResult}>Submit</button>
-        </>
-    )
+export default function SubmitButton({ getQuizResult, answers }) {
+  console.log({ answers });
+  return (
+    <>
+      <input
+        type="submit"
+        onSubmit={(answers) => {
+          getQuizResult(answers);
+        }}
+        label="Submit"
+      />
+    </>
+  );
 }

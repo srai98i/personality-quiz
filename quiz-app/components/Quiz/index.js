@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Question from "../Question";
-import Answer from "../Answer";
 import SubmitButton from "../SubmitButton";
 import questionsArray from "../../lib/quizData";
 
@@ -19,7 +18,12 @@ export default function Quiz() {
     );
   };
 
-  console.log({ answers });
+  const getQuizResult = (answers) => {
+    const answerArray = [...answers];
+    console.log(answerArray);
+    const sortedArray = answerArray.sort((a, b) => b - a);
+    console.log(sortedArray);
+  };
 
   return (
     <form>
@@ -28,11 +32,13 @@ export default function Quiz() {
           <li key={index.toString()}>
             <Question
               question={questionText}
-              onChange={(buttonType) => handleChange(index, buttonType)}
-            ></Question>
+              onChange={(buttonType) =>
+                handleChange(index, buttonType)
+              }></Question>
           </li>
         ))}
       </ol>
+      <SubmitButton getQuizResult={getQuizResult} answers={answers} />
     </form>
   );
 }
