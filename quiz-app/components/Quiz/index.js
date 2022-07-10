@@ -9,6 +9,9 @@ export default function Quiz() {
   const [answers, setAnswers] = useState(
     Array(questionsArray.length).fill(null)
   );
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [finalAnswer, setFinalAnswer] = useState("");
+
   const handleChange = (index, buttonType) => {
     setAnswers(
       answers.map((buttonTypeElement, elementIndex) =>
@@ -17,18 +20,21 @@ export default function Quiz() {
     );
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const answerArray = [...answers];
+    //const sortedArray = answerArray.sort((a, b) => b - a);
+    const mostOccuring = answerArray.reduce((previous, current, i, arr) =>
+      arr.filter((item) => item === previous).length >
+      arr.filter((item) => item === current).length
+        ? previous
+        : current
+    );
 
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      const answerArray = [...answers];
-      //const sortedArray = answerArray.sort((a, b) => b - a);
-      const mostOccuring = answerArray.reduce((previous, current, i, arr) =>
-      arr.filter(item => item === previous).length >
-      arr.filter(item => item === current).length ? previous : current
-      
-);
-console.log(mostOccuring)
-return mostOccuring  
+    console.log(mostOccuring);
+    setIsSubmitted(true);
+    setFinalAnswer(mostOccuring);
+    return mostOccuring;
   };
 
   return (
@@ -38,21 +44,36 @@ return mostOccuring
           <li key={index.toString()}>
             <Question
               question={questionText}
-              onChange={(buttonType) => handleChange(index, buttonType)}
-            ></Question>
+              onChange={(buttonType) =>
+                handleChange(index, buttonType)
+              }></Question>
           </li>
         ))}
       </ol>
       <input type="submit" />
+      <p>{false ? finalAnswer : null}</p>
     </form>
   );
 }
 
-
+/* 
+render() {
+  const isLoggedIn = this.state.isLoggedIn;
+  return (
+    <div>
+      {isLoggedIn
+        ? <LogoutButton onClick={this.handleLogoutClick} />
+        : <LoginButton onClick={this.handleLoginClick} />
+      }
+    </div>
+  );
+}
+*/
 /* 
 switch statement takes in mostOccuring
 gives us back result that aligns with mostOccuring value 
 want to render text conditionally based on that return 
+want to prevent users from pressing submit before the entire form has been filled in,
 
 do we want to:
 - send to another page?
@@ -61,6 +82,13 @@ do we want to:
 
 /* NEXT STEPS
 - conditionally render result of mostOccuring
+
+- Create a state for isSubmitted which begins as null
+- When submit button is clicked change isSubmitted to true
+- When isSubmitted is true render an answer (try using handlesubmit)
+
+
+
 - lib.js make object with k/v pair of {buttonType: heros journey}
 - import into quiz and use object to conditionally render result on browser
    = our logic for generating results is DONE 
