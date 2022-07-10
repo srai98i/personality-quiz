@@ -12,8 +12,11 @@ export default function Quiz() {
     Array(questionsArray.length).fill(null)
   );
   const handleChange = (index, buttonType) => {
-    console.log({ index, buttonType });
-    setAnswers(answers.map((x, ind) => (ind === index ? buttonType : x)));
+    setAnswers(
+      answers.map((buttonTypeElement, elementIndex) =>
+        elementIndex === index ? buttonType : buttonTypeElement
+      )
+    );
   };
 
   console.log({ answers });
@@ -25,9 +28,9 @@ export default function Quiz() {
           <li key={questionText}>
             <Question
               question={questionText}
-              onChange={(buttonType) => handleChange(index, buttonType)}>
-            <p> Hello</p>
-            </Question>
+              onChange={(buttonType) =>
+                handleChange(index, buttonType)
+              }></Question>
           </li>
         ))}
       </ol>

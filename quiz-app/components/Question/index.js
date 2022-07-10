@@ -1,16 +1,23 @@
 export default function Question({ question, onChange }) {
-  const buttonTypes = ["Agree", "Slightly Agree", "Neutral", "Slightly Disagree", "Disagree"];
+  const buttonTypes = [
+    "Agree",
+    "Slightly Agree",
+    "Neutral",
+    "Slightly Disagree",
+    "Disagree",
+  ];
 
   return (
     <>
-       <p>{question}</p> 
-    
+      <label htmlFor={question}>
+        {question} {"\n"}
+      </label>
+
       {buttonTypes.map((buttonType) => (
         <>
           <input
             type="radio"
             name={question}
-            text={question}
             key={buttonType}
             id={question + buttonType}
             value={buttonType}
@@ -19,6 +26,7 @@ export default function Question({ question, onChange }) {
           <label htmlFor={question + buttonType}>{buttonType}</label>
         </>
       ))}
+      <p></p>
     </>
   );
 }
