@@ -1,3 +1,9 @@
+
+
+//export const LineItem = item => <li key={uuid()}>{item}</li>
+
+//export const List = () => array.map(item => <LineItem item={item} />)
+
 export default function Question({ question, onChange }) {
   const buttonTypes = [
     "Agree",
@@ -7,9 +13,15 @@ export default function Question({ question, onChange }) {
     "Disagree",
   ];
 
+  const buttonKey = Math.floor(Math.random() * 1000);
+//Getting rid of key Error
+// 
+
+
+
   return (
     <>
-      <label htmlFor={question}>
+      <label htmlFor={question} >
         {question} {"\n"}
       </label>
 
@@ -18,7 +30,7 @@ export default function Question({ question, onChange }) {
           <input
             type="radio"
             name={question}
-            key={buttonType}
+            key={question + buttonType}
             id={question + buttonType}
             value={buttonType}
             onClick={() => onChange(buttonType)}
