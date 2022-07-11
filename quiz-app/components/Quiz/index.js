@@ -36,6 +36,27 @@ export default function Quiz() {
     setIsSubmitted(true);
     setFinalAnswer(mostOccuring);
 
+    const getFinalAnswer = (mostOccuring) => {
+      switch (mostOccuring) {
+        case Agree:
+        return 'First String'
+
+        case 'Slightly Agree':
+        return 'Slightly Agree'
+
+        case Neutral:
+        return 'Neutral'
+
+        case SlightlyDisagree:
+        return 'Agree'
+
+        case Agree:
+        return 'Agree'
+
+
+      }
+    }
+
   };
 
   return (
