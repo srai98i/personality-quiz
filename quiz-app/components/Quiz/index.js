@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Question from "../Question";
-import { questionsArray, heroStages }  from "../../lib/quizData";
+import { questionsArray, heroStages, answerOptions } from "../../lib/quizData";
 
 // key needs to be on the looped elements - the parent element
 
@@ -32,31 +32,27 @@ export default function Quiz() {
     );
 
     console.log(mostOccuring);
-    
+
     setIsSubmitted(true);
-    setFinalAnswer(mostOccuring);
+    setFinalAnswer(getFinalAnswer(mostOccuring));
+  };
+  const getFinalAnswer = (mostOccuring) => {
+    switch (mostOccuring) {
+      case answerOptions[0]:
+        return "First String";
 
-    const getFinalAnswer = (mostOccuring) => {
-      switch (mostOccuring) {
-        case Agree:
-        return 'First String'
+      case answerOptions[1]:
+        return "Second String";
 
-        case 'Slightly Agree':
-        return 'Slightly Agree'
+      case answerOptions[2]:
+        return "Third string";
 
-        case Neutral:
-        return 'Neutral'
+      case answerOptions[3]:
+        return "Fourth String";
 
-        case SlightlyDisagree:
-        return 'Agree'
-
-        case Agree:
-        return 'Agree'
-
-
-      }
+      case answerOptions[4]:
+        return "Fifth String";
     }
-
   };
 
   return (
@@ -73,7 +69,7 @@ export default function Quiz() {
         ))}
       </ol>
       <input type="submit" />
-      <p className='final-result'>{isSubmitted ? heroStages[finalAnswer] : null}</p>
+      <p className="final-result">{isSubmitted ? finalAnswer : null}</p>
     </form>
   );
 }

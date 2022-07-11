@@ -1,12 +1,6 @@
-export default function AnswerButtons({ question, onChange }) {
-  const answerOptions = [
-    "Agree",
-    "Slightly Agree",
-    "Neutral",
-    "Slightly Disagree",
-    "Disagree",
-  ];
+import { answerOptions } from "../../lib/quizData";
 
+export default function AnswerButtons({ question, onChange }) {
   return (
     <>
       {answerOptions.map((buttonType) => (
