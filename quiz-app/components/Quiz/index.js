@@ -35,8 +35,7 @@ export default function Quiz() {
     
     setIsSubmitted(true);
     setFinalAnswer(mostOccuring);
-    console.log(heroStages.finalAnswer);
-    return mostOccuring;
+
   };
 
   return (
@@ -53,7 +52,7 @@ export default function Quiz() {
         ))}
       </ol>
       <input type="submit" />
-      <p className='final-result'>{isSubmitted ? heroStages.finalAnswer : null}</p>
+      <p className='final-result'>{isSubmitted ? heroStages[finalAnswer] : null}</p>
     </form>
   );
 }
