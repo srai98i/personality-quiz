@@ -1,15 +1,15 @@
+import Image from "next/image";
 
-
-const NavBar = () => {
+export default function NavBar() {
     return (
-        <div>
+        <nav className="flex justify-end gap-x-80 gap-y-160 ">
+        <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
             <ul>
                 <li>Journey Types</li>
                 <li>Login</li>
-                <li></li>
+   
             </ul>
-        </div>
+        </nav>
     )
 }
 
-export default NavBar
