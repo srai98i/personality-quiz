@@ -12,10 +12,10 @@ export default function NavBar() {
         />
         <ul className="flex justify-self-end  space-x-4 text-[#F4EFEF]">
           <li>
-            <button className="bg-[#463343] py-[2vh] px-[2vw] rounded">Journey Types</button>
+            <button className="bg-[#463343] py-[2vh] px-[2vw] rounded-full">Journey Types</button>
           </li>
           <li>
-            <button className="bg-[#463343] py-[2vh] px-[2vw]">Login</button>
+            <button className="bg-[#463343] py-[2vh] px-[6vw] rounded-full">Login</button>
           </li>
         </ul>
       </nav>
