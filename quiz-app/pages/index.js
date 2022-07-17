@@ -15,9 +15,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
-      <section className="flex flex-col w-full h-[30.5%] justify-center align-center content-center border-dotted bg-[#180520] box-border border-8 border-[#E1A774]">
+      <section className="flex flex-col w-full h-[30.5%]  justify-center  align-center content-center border-dotted bg-[#180520] box-border border-[0.25rem] border-[#E1A774]">
       <h1 className="self-center text-[6.5vh] font-bold text-[#E1A774]"> Hero's Journey</h1>
-      <h3 className="self-center text-[#E1A774]">Answer the questions below to find out which stage of the Hero's Journey you are currently on</h3>
+      <h3 className="self-center text-center text-[#E1A774]">Answer the questions below to find out which stage of the Hero's Journey you are currently on</h3>
       </section>
       
       <Quiz />
