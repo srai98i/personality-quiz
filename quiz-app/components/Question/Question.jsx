@@ -2,15 +2,19 @@ import AnswerButtons from "../AnswerButtons";
 
 export default function Question({ question, onChange }) {
   return (
-    <section className="flex shrink-10 relative space-x-4 left-[20vw] overflow-auto right-[20vw] justify-between w-[60%] h-16 border-b-[0.1rem] border-b-[#E1A774] bg-[#180520] text-[#E1A774] text-[100%] p-[1%] ">
-      <label className="flex shrink-10 justify-self-start" htmlFor={question}>
+    <section className="flex shrink-10 relative space-x-4 left-[20vw] right-[20vw] justify-between w-[60%] h-16 border-b-[0.1rem] border-b-[#E1A774] bg-[#180520] text-[#E1A774] text-[60%] p-[1%] ">
+      <div className="flex self-start">
+      <label className="flex  justify-self-start" htmlFor={question}>
         {question} {"\n"}
       </label>
+      </div>
+      <div>
       <AnswerButtons
-        className="flex shrink-10 justify-self-end"
+        className="flex  flex-row"
         question={question}
         onChange={onChange}
       />
+      </div>
       <p></p> {/*for spacing*/}
     </section>
   );
