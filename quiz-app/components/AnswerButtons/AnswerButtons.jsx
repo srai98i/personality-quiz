@@ -5,7 +5,7 @@ export default function AnswerButtons({ question, onChange }) {
     <>
       {answerOptions.map((buttonType) => (
         <span key={question + buttonType}>
-          <input
+          <input className="flex self-center"
             type="radio"
             name={question}
             key={question + buttonType}
@@ -13,7 +13,7 @@ export default function AnswerButtons({ question, onChange }) {
             value={buttonType}
             onClick={() => onChange(buttonType)}
           />
-          <label htmlFor={question + buttonType}>{buttonType}</label>
+          <label className="flex flex-col self-center" htmlFor={question + buttonType}>{buttonType}</label>
         </span>
       ))}
     </>
