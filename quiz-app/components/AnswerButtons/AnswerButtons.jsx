@@ -5,7 +5,7 @@ export default function AnswerButtons({ question, onChange }) {
     <>
       {answerOptions.map((buttonType) => (
         <div
-          className=" flex flex-col items-center w-[10%] border-[#E1A774] box-border border-[0.1rem]"
+          className=" flex flex-col items-center w-[10%] box-border"
           key={question + buttonType}
         >
           <input
@@ -18,7 +18,7 @@ export default function AnswerButtons({ question, onChange }) {
             onClick={() => onChange(buttonType)}
           />
           <label
-            className="flex flex-col items-center w-[90%] h-[1rem] border-green-500 box-border border-[0.1rem]"
+            className="flex flex-col place-self-center items-center w-[90%] h-[1rem] box-border text-[1em]"
             htmlFor={question + buttonType}
           >
             {buttonType}

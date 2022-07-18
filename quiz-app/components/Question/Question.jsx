@@ -2,10 +2,10 @@ import AnswerButtons from "../AnswerButtons";
 
 export default function Question({ question, onChange }) {
   return (
-    <section className="flex relative justify-items-center w-screen h-[5rem] bg-[#180520] text-[#E1A774]  border-b-[#E1A774] box-border border-[0.1rem] text-[0.8rem] scale-100">
+    <section className="flex relative justify-items-center w-screen h-[5rem] bg-[#180520] text-[#E1A774]  border-b-[#E1A774] box-border border-b-[0.1rem] text-[0.8rem] scale-100">
       
         {/* <div className="flex self-start object-scale-down"> */}
-          <label className="flex  place-self-center text-[0.8em] w-[30%] border-[#E1A774] box-border border-[0.1rem]" htmlFor={question}>
+          <label className="flex  place-self-center text-[1.25em] w-[30%] box-border" htmlFor={question}>
             {question} {"\n"}
           </label>
         {/* </div> */}
