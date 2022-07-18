@@ -53,8 +53,9 @@ export default function Quiz() {
       case answerOptions[4]:
         return "Fifth String";
     }
+    // console.log(mostOccuring)
   };
-
+console.log(getFinalAnswer)
   return (
     <form className="flex flex-col" onSubmit={handleSubmit}>
       <ol>
@@ -71,7 +72,7 @@ export default function Quiz() {
         type="submit"
         className="bg-[#E1A774] py-[2vh] px-[2vw] rounded-full m-8 self-center"
       />
-      <p className="final-result">{isSubmitted ? finalAnswer : null}</p>
+      <p className="text-white">{isSubmitted ? finalAnswer : null}</p>
     </form>
   );
 }
