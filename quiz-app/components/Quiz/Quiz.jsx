@@ -2,7 +2,6 @@ import { useState } from "react";
 import Question from "../Question";
 import { questionsArray, heroStages, answerOptions } from "../../lib/quizData";
 
-// key needs to be on the looped elements - the parent element
 
 export default function Quiz() {
   //programatically generates an array of length questionsArray and fills with null values.
@@ -23,7 +22,6 @@ export default function Quiz() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const answerArray = [...answers];
-    //const sortedArray = answerArray.sort((a, b) => b - a);
     const mostOccuring = answerArray.reduce((previous, current, i, arr) =>
       arr.filter((item) => item === previous).length >
       arr.filter((item) => item === current).length
@@ -51,9 +49,8 @@ export default function Quiz() {
       case answerOptions[4]:
         return heroStages.Disagree;
     }
-    // console.log(mostOccuring)
+    
   };
-console.log(getFinalAnswer)
   return (
     <form className="flex flex-col w-screen  box-border " onSubmit={handleSubmit}>
       <ol className="flex ml-[20%] flex-col w-[100%] box-border self-center">
