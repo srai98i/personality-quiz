@@ -4,9 +4,9 @@ export default function AnswerButtons({ question, onChange }) {
   return (
     <>
       {answerOptions.map((buttonType) => (
-        <span className="w-[60%]" key={question + buttonType}>
+        <span className="w-[60%] border-[#E1A774] box-border border-[0.1rem]" key={question + buttonType}>
           <input
-            className="appearance-none w-[90%] h-[1em]  checked:bg-[#E1A774] rounded-full box-border border-solid border-2 border-[#E1A774] "
+            className="appearance-none w-[1em] h-[1em]  checked:bg-[#E1A774] rounded-full box-border border-solid border-2 border-[#E1A774] "
             type="radio"
             name={question}
             key={question + buttonType}
