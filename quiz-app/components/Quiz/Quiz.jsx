@@ -70,7 +70,7 @@ console.log(getFinalAnswer)
         type="submit"
         className="bg-[#E1A774] py-[2vh] px-[2vw] rounded-full self-center m-8"
       />
-      <p className="flex  self-center m-[1em] text-[2em] text-[#E1A774]">{isSubmitted ? finalAnswer : null}</p>
+      <p className="flex w-[80%] self-center m-[1em] text-[2em] text-[#E1A774]">{isSubmitted ? finalAnswer : null}</p>
     </form>
   );
 }
