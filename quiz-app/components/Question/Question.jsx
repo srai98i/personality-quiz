@@ -2,7 +2,8 @@ import AnswerButtons from "../AnswerButtons";
 
 export default function Question({ question, onChange }) {
   return (
-    <section className="flex shrink-10 relative space-x-4 left-[20vw] right-[20vw] justify-between w-[60%] h-16 bg-[#180520] text-[#E1A774] p-[8%] min-h-full text-[.5rem] scale-100">
+    <section className="flex flex-col box-border" >
+     <div className="flex relative  space-x-4 divide-y-10 left-[20vw] right-[20vw] justify-between w-[60%] h-16 bg-[#180520] text-[#E1A774] p-[8%] min-h-full text-[.5rem] scale-100">
       <div className="flex self-start object-scale-down">
       <label className="flex  justify-self-start" htmlFor={question}>
         {question} {"\n"}
@@ -14,8 +15,11 @@ export default function Question({ question, onChange }) {
         question={question}
         onChange={onChange}
       />
+      </div>
       <p></p> {/*for spacing*/}
-      <hr className=" border-b-[#E1A774] w-[50%]"/>
+      <div className="flex flex-col h-full w-full">
+     <hr className="bg-[#E1A774] w-[60%] h-1 self-center justify-center "/>
+     </div>
     </section>
   );
 }
