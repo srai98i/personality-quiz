@@ -1,14 +1,11 @@
 export const questionsArray = [
   "Morning is my favourite time of the day.",
-  "I'm a highly organized person."
-
-  //Add more questions after finishing MVP
-
-  // "I'm effective at achieveing my goals.",
-  // "I could use some support in my life right now.",
-  // "Something's missing from life. I crave something more",
-  // "I feel like I have no purpose",
-  // "I've maintaned positive changes in my life.",
+  "I'm a highly organized person.",
+  "I'm effective at achieveing my goals.",
+  "I could use some support in my life right now.",
+  "Something's missing from life. I crave something more",
+  "I feel like I have no purpose",
+  "I've maintaned positive changes in my life.",
 ];
 
 export const heroStages = {
