@@ -37,26 +37,26 @@ export default function Quiz() {
   const getFinalAnswer = (mostOccuring) => {
     switch (mostOccuring) {
       case answerOptions[0]:
-        return "First String";
+        return heroStages.Agree;
 
       case answerOptions[1]:
-        return "Second String";
+        return  heroStages.SlightlyAgree;
 
       case answerOptions[2]:
-        return "Third string";
+        return heroStages.Neutral;
 
       case answerOptions[3]:
-        return "Fourth String";
+        return heroStages.SlightlyDisagree;
 
       case answerOptions[4]:
-        return "Fifth String";
+        return heroStages.Disagree;
     }
     // console.log(mostOccuring)
   };
 console.log(getFinalAnswer)
   return (
     <form className="flex flex-col w-screen  box-border " onSubmit={handleSubmit}>
-      <ol className="flex flex-col w-[80%] box-border self-center">
+      <ol className="flex ml-[20%] flex-col w-[100%] box-border self-center">
         {questionsArray.map((questionText, index) => (
           <li key={index.toString()}>
             <Question
@@ -70,7 +70,7 @@ console.log(getFinalAnswer)
         type="submit"
         className="bg-[#E1A774] py-[2vh] px-[2vw] rounded-full self-center m-8"
       />
-      <p className="text-white">{isSubmitted ? finalAnswer : null}</p>
+      <p className="flex  self-center m-[1em] text-[2em] text-[#E1A774]">{isSubmitted ? finalAnswer : null}</p>
     </form>
   );
 }

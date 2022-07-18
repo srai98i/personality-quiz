@@ -9,7 +9,7 @@ export const questionsArray = [
 ];
 
 export const heroStages = {
-  Agree: "First String",
+  Agree: `Call To Adventure: ${<br/>} The Hero's adventure begins when he receives a call to action, such as a direct threat to his safety, his family, his way of life or to the peace of the community in which he lives. It may not be as dramatic as a gunshot, but simply a phone call or conversation but whatever the call is, and however it manifests itself, it ultimately disrupts the comfort of the Hero's Ordinary World and presents a challenge or quest that must be undertaken.`,
   SlightlyAgree: "Second String",
   Neutral: "Third String",
   SlightlyDisagree: "Fourth String",
