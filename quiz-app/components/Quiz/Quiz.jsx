@@ -31,8 +31,6 @@ export default function Quiz() {
         : current
     );
 
-    console.log(mostOccuring);
-
     setIsSubmitted(true);
     setFinalAnswer(getFinalAnswer(mostOccuring));
   };
@@ -57,8 +55,8 @@ export default function Quiz() {
   };
 console.log(getFinalAnswer)
   return (
-    <form className="flex flex-col" onSubmit={handleSubmit}>
-      <ol>
+    <form className="flex flex-col w-screen" onSubmit={handleSubmit}>
+      <ol className="place-self-center">
         {questionsArray.map((questionText, index) => (
           <li key={index.toString()}>
             <Question
