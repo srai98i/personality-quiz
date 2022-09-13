@@ -1,6 +1,6 @@
 # Hero's Journey Personality Quiz
 
-We were inspired by Joseph Campbell's framework of the Hero's Journey & the 16 Personalities UI to make a personality quiz with this theme. We saw this project as an opportunity to learn and experiment with new technology and challenged ourselves to explore Next JS and CSS Tailwind.
+We were inspired by Joseph Campbell's framework of the Hero's Journey & the 16 Personalities UI to make a personality quiz. We saw this project as an opportunity to learn and experiment with new technology and challenged ourselves to explore Next JS and CSS Tailwind.
 
 ## Authors
 
@@ -63,6 +63,12 @@ There were a lot of ways to calculate a final answer from the inputs provided by
 
 
 ## Lessons Learnt
+
+- We were able to become familiar with Next JS and CSS Tailwind because of this project. Learning React helped us learn this framework and use it with more confidence than we initially expected.
+
+- Using CSS Tailwind helped us deepen our knowledge of CSS. We found the process of thinking about the vanilla CSS solution and then translating it into CSS Tailwind syntax very helpful in understanding CSS principles better.
+
+- We attempted to build a form from scratch but this project has helped us understand the ease and value of using libraries such as Formik. 
 
 
 ## Acknowledgements
