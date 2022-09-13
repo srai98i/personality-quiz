@@ -70,6 +70,8 @@ There were a lot of ways to calculate a final answer from the inputs provided by
 
 - We attempted to build a form from scratch but this project has helped us understand the ease and value of using libraries such as Formik. 
 
+- Following Agile principles to manage this project allowed us to stay on task and organised. The structure of standups and retrospectives where all members of the team were allowed to raise their viewpoints and speak honestly about the progress and direction helped us improve every session. We were always open to the idea of trying a different solution if need be. This open attitude ensured that every session was productive.
+
 
 ## Acknowledgements
 
