@@ -73,7 +73,12 @@ There were a lot of ways to calculate a final answer from the inputs provided by
 - Following Agile principles to manage this project allowed us to stay on task and organised. The structure of standups and retrospectives where all members of the team were allowed to raise their viewpoints and speak honestly about the progress and direction helped us improve every session. We were always open to the idea of trying a different solution if need be. This open attitude ensured that every session was productive.
 
 
-## Acknowledgements
+## Next Steps
+
+Upcoming features include:
+
+- User profiles
+- Utilising pages to provide detailed explanations of each Hero's Journey stage
 
 
 
